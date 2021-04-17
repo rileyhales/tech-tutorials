@@ -1,0 +1,14 @@
+# the docker-compose version, not the script/container version
+version: '3.7'
+
+services:
+  thredds-production:
+    container_name: thredds
+    image: unidata/thredds-docker:latest
+    build:
+      context: ""
+    ports:
+      - 7000:8080
+    volumes:
+      # the path on the right is the path inside the container where thredds looks for the data
+      - /path/on/your/computer/to/data/folder:/usr/local/tomcat/content/thredds/public/data
