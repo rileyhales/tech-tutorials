@@ -11,4 +11,4 @@ services:
       - 7000:8080
     volumes:
       # the path on the right is the path inside the container where thredds looks for the data
-      - /path/on/your/computer/to/data/folder:/usr/local/tomcat/content/thredds/public/data
+      - </your/path/to/data>:/usr/local/tomcat/content/thredds/public/data
